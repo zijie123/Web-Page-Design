@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./statics/js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+    <script src="statics/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="statics/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+    <title>Population</title>
+
+
+    <style>
+        .services .number ul li {
+            width: 100vw;
+            height: 60vh;
+            background: rgba(230, 193, 241, 0.44);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #FFFFFF;
+        }
+
+        .header.fixed {
+            position: fixed;
+            background: rgba(230, 193, 241, 0.44);
+            height: 8vh;
+            transition: all .3s;
+        }
+        .logo{
+            margin: 20px;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <!--头部导航-->
+    <div class="header">
+        <div class="logo">
+            <img src="statics/images/logo.png" width="50px" height="50px">
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="./Home/first.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./dialect.html">DIALECT</a>
+                </li>
+                <li>
+                    <a href="./cuisine.html">CUISINE</a>
+                </li>
+                <li class="active">
+
+                    <a href="">POPULATION</a>
+                </li>
+                <li>
+                    <a href="./humanity.html">NATIONALITY</a>
+                </li>
+                <li>
+                    <a href="./architecture.html">ARCHITECTURE</a>
+                </li>
+                <li>
+                    <a href="./nature.html">NATURAL GEOGRAPHY</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--轮播图-->
+    <div class="slider swiper-container" style="height: 50vh">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <div class="picslider1" style="background-size: cover; width: 100%; height: 100%;
+                background: url(./statics/images/人群1.jpg) center center no-repeat;"></div>
+                <img src="statics/images/banner.jpg" />
+
+                <div class="slider-txt">
+                    <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Human Geography ~
+                        Population</h3>
+                    <p class="sub-title" style="text-shadow: 0 0 4px #afafaf, 0 0 5px #727272; "></p>
+                </div>
+            </li>
+            <li class="swiper-slide">
+
+                <div class="picslider2" style="background-size: cover"></div>
+                <div class="picslider1" style="background-size: cover; width: 100%; height: 100%;
+                background: url(./statics/images/人群2.jpg) center center no-repeat;"></div>
+                <img src="statics/images/banner.jpg" />
+                <div class="slider-txt">
+                    <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Chinese geography</h3>
+                    <p class="sub-title" style="text-shadow: 0 0 4px #afafaf, 0 0 5px #727272; ">A panoramic view of the
+                        magnificent landscape of China and a panoramic
+                        view of the magical landscape of China</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="services">
+        <div class="services-box" style="top: -15vh;">
+            <div class="number">
+                <ul>
+                    <li>
+                        <div class="picoverview2"></div>
+                    </li>
+                    <li>
+                        <p class="title">14<span>billion</span></p>
+                        <p class="desc">people</p>
+                    </li>
+                    <li>
+                        <p class="title">56<sub></sub></p>
+                        <p class="desc">nationalities</p>
+                    </li>
+
+                    <li>
+                        <div class="picoverview3"></div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="main" style=" width: 90vw; height: 100vh; margin: 0 auto;"></div>
+
+        </div>
+
+    </div>
+
+    <div class="block mainbox" style="padding-top: 150vh; background-color: #FFDEE9;
+    background-image: linear-gradient(169deg, #FFDEE9 0%, #B5FFFC 100%);">
+        <h2 class="title">Statistical Charts</h2>
+        <p class="sub-title"></p>
+        <div class="box1">
+            <div id="chart01" style="width: 40%; height: 60vh;"></div>
+            <div class="textt">
+                <p>The age structure of the population is also called the age composition of the population. The
+                    proportion or percentage of each age group in the total population.
+                    Age is the basic natural attribute of population.</p>
+                <br>
+                <p>
+                    It not only has a significant impact on the type, speed and trend of future population development,
+                    but also will have a certain effect on the future social and economic development.
+                </p>
+            </div>
+            <br>
+            <div class="textt">
+                <p>Census</p>
+                <br>
+                <p>
+                    The national census is made by the state to carry out a unified demography.
+                    Its purpose is to comprehensively grasp the basic situation of the national population,
+                    and to provide demographic information services for the public.
+                </p>
+                <br>
+                <p>
+                    On May 11, 2021, the results of the seventh national census were announced,
+                    with a total population of 141.178 million
+                </p>
+            </div>
+            <div id="chart2" style="width: 40%; height: 60vh;"></div>
+            <br>
+            <!-- <div class="pic" style="background-size: cover"></div> -->
+            <iframe src="https://player.bilibili.com/player.html?aid=331867838&bvid=BV1RA411M7wV&cid=300222576&page=1"
+                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+                style="width: 40%; height: 60vh;"> </iframe>
+
+            <div class="textt">The characteristic dress of 56 nationalities</div>
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+<script>
+
+
+    var chart1 = echarts.init(document.getElementById("chart01"));
+    var option1 = {
+        title: {
+            text: 'Age Distribution'
+        },
+        xAxis: {
+            type: 'category',
+            data: ['0-14', '15-24', '25-54', '55-64', '65~'],
+            name: 'Age'
+        },
+        yAxis: {
+            type: 'value',
+            name: 'percentage(%)'
+        },
+        series: [{
+            data: [17.7, 11.8, 46.3, 12.2, 12.0],
+            type: 'bar'
+        }]
+    };
+    option1 && chart1.setOption(option1);
+
+    var chart2 = echarts.init(document.getElementById('chart2'));
+    var option2 = {
+        title: {
+            text: 'Census（*10000）'
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: [1953, 1964, 1982, 1990, 2000, 2010, 2021]
+        },
+        yAxis: {
+            type: 'value'
+        },
+        series: [{
+            data: [60193, 72307, 103188, 113368, 129533, 133281, 141178],
+            type: 'line',
+            areaStyle: {}
+        }]
+    };
+
+    option2 && chart2.setOption(option2);
+
+    var chartDom = document.getElementById('main');
+    var myChart = echarts.init(chartDom);
+    var option;
+    myChart.showLoading();
+
+    $.get('https://geo.datav.aliyun.com/areas_v2/bound/100000_full.json', function (geoJson) {
+
+        myChart.hideLoading();
+
+        echarts.registerMap('China', geoJson);
+
+        myChart.setOption(option = {
+            title: {
+                text: 'China',
+                subtext: '2020',
+                sublink: '#'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: '{b}<br/>{c} ( *10000)'
+            },
+            toolbox: {
+                show: true,
+                orient: 'vertical',
+                left: 'right',
+                top: 'center',
+                feature: {
+                    // dataView: { readOnly: true },
+                    // restore: {},
+                    // saveAsImage: {}
+                }
+            },
+            visualMap: {
+                min: 63,
+                max: 11346,
+                text: ['High', 'Low'],
+                realtime: false,
+                calculable: true,
+                inRange: {
+                    color: ['lightblue', 'yellow', 'orangered']
+                }
+            },
+            series: [
+                {
+                    name: '中国',
+                    type: 'map',
+                    mapType: 'China', // Customize extended chart types
+                    label: {
+                        show: false
+                    },
+                    data: [
+                        { name: 'Beijing', value: 2154 },
+                        { name: 'Tianjing', value: 1560 },
+                        { name: 'Hebei', value: 7556 },
+                        { name: 'Shanxi', value: 3718 },
+                        { name: 'Inner Mongolia', value: 2491 },
+                        { name: 'Liaoning', value: 4359 },
+                        { name: 'Jiling', value: 2704 },
+                        { name: 'Heilongjiang', value: 3773 },
+                        { name: 'Shanghai', value: 2424 },
+                        { name: 'Jiangsu', value: 8051 },
+                        { name: 'Zhejiang', value: 5737 },
+                        { name: 'Anhui', value: 6324 },
+                        { name: 'Fujian', value: 3941 },
+                        { name: 'Jiangxi', value: 4648 },
+                        { name: 'Shandong', value: 10047 },
+                        { name: 'Henan', value: 9605 },
+                        { name: 'Hubei', value: 5917 },
+                        { name: 'Hunan', value: 6899 },
+                        { name: 'Guangdong', value: 11346 },
+                        { name: 'Guangxi', value: 4926 },
+                        { name: 'Hainan', value: 934 },
+                        { name: 'Chongqing', value: 3102 },
+                        { name: 'Sichuan', value: 8341 },
+                        { name: 'Guizhou', value: 3600 },
+                        { name: 'Yunnan', value: 4830 },
+                        { name: 'Tibet', value: 335 },
+                        { name: 'Shanxi', value: 3864 },
+                        { name: 'Gansu', value: 2637 },
+                        { name: 'Qinghai', value: 603 },
+                        { name: 'Ningxia', value: 688 },
+                        { name: 'Xinjiang', value: 2487 },
+                        { name: 'Taiwan', value: 2359 },
+                        { name: 'Hong Kong', value: 745 },
+                        { name: 'Macao', value: 63 },
+
+                    ],
+                    // Custom name mappings
+                    nameMap: {
+                        '香港特别行政区': 'Hong Kong',
+                        '澳门特别行政区': 'Macao',
+                        '北京市': 'Beijing',
+                        '天津市':'Tianjing',
+                        '河北省':'Hebei',
+                        '山西省':'Shanxi',
+                        '内蒙古自治区':'Inner Mongolia',
+                        '辽宁省':'Liaoning',
+                        '吉林省':'Jiling',
+                        '黑龙江省':'Heilongjiang',
+                        '上海市':'Shanghai',
+                        '江苏省':'Jiangsu',
+                        '浙江省':'Zhejiang',
+                        '安徽省':'Anhui',
+                        '福建省':'Fujian',
+                        '江西省':'Jiangxi',
+                        '山东省':'Shandong',
+                        '河南省':'Henan',
+                        '湖北省':'Hubei',
+                        '湖南省':'Hunan',
+                        '广东省':'Guangdong',
+                        '广西壮族自治区':'Guangxi',
+                        '海南省':'Hainan',
+                        '重庆市':'Chongqing',
+                        '四川省':'Sichuan',
+                        '贵州省':'Guizhou',
+                        '云南省':'Yunnan',
+                        '西藏自治区':'Tibet',
+                        '陕西省':'Shanxi',
+                        '甘肃省':'Gansu',
+                        '青海省':'Qinghai',
+                        '宁夏回族自治区':'Ningxia',
+                        '新疆维吾尔自治区':'Xinjiang',
+                        '台湾省':'Taiwan'
+                    }
+                }
+            ]
+        });
+    });
+
+    option && myChart.setOption(option);
+
+    window.onresize = function () {
+
+        window.location.reload();
+
+    }
+
+
+    $(window).scroll(function () {
+        var height = $(document).scrollTop()
+        console.log(height)
+        if (height > 150) {
+            $('.header').addClass('fixed')
+        } else {
+            $('.header').removeClass('fixed')
+        }
+    })
+    //example
+    $('.case ul li').hover(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    //swiper plug-in
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        loop: true,
+        autoplay: 2500
+    });
+    var swiper = new Swiper('.swiper-container2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+
+
+
+</script>
+
+</html>

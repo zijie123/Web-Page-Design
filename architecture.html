@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>architecture</title>
+    <link rel="stylesheet" type="text/css" href="statics/css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="statics/css/stylebao.css"/>
+    <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="statics/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+        .hide {
+            visibility: hidden;
+        }
+
+        #tab ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height: 30px;
+            line-height: 30px;
+            margin-top: 10vh;
+        }
+
+        #tab ul li {
+            background: #FFF;
+            cursor: pointer;
+            list-style: none;
+            height: 29px;
+            line-height: 29px;
+            padding: 0 10px;
+            margin: 0 10px;
+            border: 1px solid #BBB;
+            border-bottom: 2px solid #6a96da;
+            border-radius: 29px;
+        }
+
+        #tab ul li.on {
+            border-top: 2px solid #6a96da;
+            border-bottom: 2px solid #FFF;
+        }
+
+        div1 {
+            position: absolute;
+        }
+
+        @media screen and (max-width: 400px) {
+            #tab {
+                visibility: hidden
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var myTab = document.getElementById("tab");
+            var myUl = myTab.getElementsByTagName("ul")[0];
+            var myLi = myUl.getElementsByTagName("li");
+            var myDiv = myTab.getElementsByTagName("div1");
+
+            for (var i = 0; i < myLi.length; i++) {
+                myLi[i].index = i;
+                myLi[i].onclick = function () {
+                    for (var j = 0; j < myLi.length; j++) {
+                        myLi[j].className = "off";
+                        myDiv[j].className = "hide";
+                    }
+                    this.className = "on";
+                    myDiv[this.index].className = "show";
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+<!--头部导航-->
+<div class="header">
+    <div class="logo">
+        <img src="statics/images/logo.png" width="50px" height="50px">
+    </div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="Home/first.html">HOME</a>
+            </li>
+            <li>
+                <a href="./dialect.html">DIALECT</a>
+            </li>
+            <li>
+                <a href="./cuisine.html">CUISINE</a>
+            </li>
+            <li>
+                <a href="./population.html">POPULATION</a>
+            </li>
+            <li>
+                <a href="./humanity.html">NATIONALITY</a>
+            </li>
+            <li class="active">
+                <a href="">ARCHITECTURE</a>
+            </li>
+            <li>
+                <a href="./nature.html">NATURAL GEOGRAPHY</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--轮播图-->
+<div class="slider swiper-container">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+            <div class="picslider1" style="background-size: cover"></div>
+
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Human Geography ~
+                    Architecture</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">
+                    Architecture is undoubtedly the most remarkable landscape with regional characteristics. </p>
+            </div>
+        </li>
+        <li class="swiper-slide">
+
+            <div class="picslider2" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Chinese geography</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">A panoramic view of the
+                    magnificent landscape of China and a panoramic
+                    view of the magical landscape of China</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="services">
+    <div class="services-box">
+        <div class="number">
+            <ul>
+                <li>
+                    <div class="picoverview3"></div>
+                </li>
+                <li>
+                    <p class="title">9.6<span>billion</span></p>
+                    <p class="desc">square kilometers</p>
+                </li>
+                <li>
+                    <p class="title">18<sub>+</sub></p>
+                    <p class="desc">Architectural style</p>
+                </li>
+
+                <li>
+                    <div class="picoverview2"></div>
+                </li>
+            </ul>
+        </div>
+
+        <div id="tab" class="tab">
+            <ul>
+                <li class="off">1</li>
+                <li class="on">2</li>
+                <li class="off">3</li>
+            </ul>
+            <div1 class="hide" id="firstpage">
+                <div class="our-service">
+                    <div class="our-service-l">
+                        <p class="title">What are the advantages of dai nationality?</p>
+                        <div class="desc">
+                            <span>Building materials economy</span><br>
+                            <span>warm in winter and cool in summer</span><br>
+                            <span>Waterproof shockproof</span><br>
+
+                        </div>
+                    </div>
+                    <div class="our-service-l">
+                        <p class="title">The Unified Architectural Idea of Chinese Characteristic Dwelling House?</p>
+                        <div class="desc">
+                            <p>Heaven and earth become one.
+                                The design principle of the unity of nature and man is shown in the folk dwellings in
+                                any region show great respect for the sky -- connected with the weather. In many places,
+                                the folk dwellings organize the architectural layout with courtyards and courtyards. The
+                                courtyards are places where people can move in the weather, while the courtyards are
+                                places where people can't move in the weather.
+                                The unity of land and people is mainly reflected in the local characteristics of the
+                                form of dwellings. Different regional conditions in different places have created
+                                different forms of landlord dwellings</p>
+
+                        </div>
+                    </div>
+                    <div class="our-service-l">
+                        <p class="title">A rare representative of manor architecture in northern Shaanxi?</p>
+                        <div class="desc">
+                            <p>Tianjiang manor is located in qiaohecha township, 16 kilometers southeast of the county
+                                seat of mili, built in the qing dynasty tongzhi by the village's richest man jiang yaozu
+                                invited Beijing experts to design, gather the county skilled craftsmen to build and
+                                become, around the time of 13 years.
+                                The manor covers an area of more than 40 mu, and the main building is the highest grade
+                                "bright five dark four six chamber kiln" cave courtyard in Shaanxi.
+                                The manor is the largest castle-style cave manor in China. The three courtyards are
+                                connected by secret passages, surrounded by high walled walls, which are mutually
+                                connected inside and strictly guarded against disasters outside</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div1>
+            <div1 class="show" id="secondpage">
+                <div class="our-service">
+                    <div class="our-service-l">
+                        <p class="title">The mainstream of traditional folk houses in various regions of China?</p>
+                        <div class="desc">
+                            <p>The mainstream of traditional dwellings in various regions of China is regular residence,
+                                which is typical of Beijing quadrangle courtyard which is arranged in a symmetrical way.
+                                Beijing Siheyuan is divided into two chambers, with the central principal room system
+                                being the most respected. It is the place for holding family etiquette and receiving
+                                distinguished guests. Each building is connected to the courtyard by verandas.
+                                Although Beijing siheyuan is the Chinese feudal society patriarchal patriarchal concept
+                                and the family system in the residential building on the concrete performance, but the
+                                courtyard square is wide, the scale is appropriate, quiet kind, flowers and trees in
+                                order, it is a very ideal outdoor living space.</p>
+
+                        </div>
+                    </div>
+                    <div class="our-service-l">
+                        <p class="title">What is the main form of Chinese traditional residence?</p>
+                        <div class="desc">
+                            <p>Wooden frame courtyard type, its number is large, the distribution is wide, for the Han,
+                                Manchu, Bai and other ethnic groups in the majority of people and a part of the use of
+                                other minorities.
+                                This kind of residence is mainly made of wood frame housing, which is built along the
+                                main axis of the north-south main hall or principal room. In front of the principal
+                                room, the east and west wing rooms are built around the confrontation.
+                                This kind of distribution is in line with the Chinese feudal society in family life to
+                                distinguish between senior and junior, inside and outside the requirements of etiquette.
+                                Among them, the quadrangle courtyard is represented by the quadrangle courtyard in
+                                Beijing, forming a unique architectural style.</p>
+                        </div>
+                    </div>
+                    <div class="our-service-l">
+                        <p class="title">The Influence of Natural Environment on Dwellings in Ningxia?</p>
+                        <div class="desc">
+                            <p> Ningxia is located in the northwest far away from the sea, with less precipitation,
+                                large temperature difference, cold climate, obvious continental climate characteristics,
+                                dry winter and spring windy sand, prevailing northerly wind, so the residential
+                                buildings generally do not open north Windows.
+                                In order to keep warm and cold, it adopts the form of wing room and courtyard, and the
+                                house is compact. The roof form is one slope and two slopes coexist.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div1>
+            <div1 class="hide" id="thirdpage">
+                <div class="our-service">
+                    <div class="our-service-l">
+                        <p class="title">The characteristics of Chaoshan folk houses?</p>
+                        <div class="desc">
+                            <p> Chaozhou folk house is a traditional folk house building in Chaoshan area of Guangdong
+                                Province, with distinctive characteristics and high aesthetic value. Chaoshan ethnic
+                                group and live, along the river coastal plain area, the economy is more developed, many
+                                prominent families live in these places, the old county seat is also more than a group
+                                of ethnic group and live in the situation. Therefore, both urban and rural residents
+                                have a strong clan concept, which is reflected in the settlement architecture which is a
+                                walled village pattern centered on the family name and ancestral hall. Chaoshan rural
+                                communities and live, the whole village, are based on the idea of their clans, geomantic
+                                concepts, production and life, defense functions and some aesthetic concepts to
+                                build. </p>
+                        </div>
+                    </div>
+                    <div class="our-service-l">
+                        <p class="title">What are the two systems of Chinese traditional architecture?</p>
+                        <div class="desc">
+                            <p> official and folk. Official buildings, such as palaces, shrines, mausoleums, temples,
+                                mansions, etc., and folk buildings, such as dwellings, gardens, ancestral halls, guilds,
+                                etc. Dwelling houses, as one of the contents of traditional architecture, have obvious
+                                local characteristics and strong ethnic characteristics because of their wide
+                                distribution, large quantity and close correlation with the life and production of the
+                                people of various nationalities. From the historical practice of the nation, it
+                                summarizes its excellent characteristics and experience, which are also used for
+                                reference and application in today's architectural creation. </p>
+                        </div>
+                    </div>
+                    <div class="our-service-l">
+                        <p class="title">How does the dwelling house reveal the national characteristics?</p>
+                        <div class="desc">
+                            <p>Residential buildings do not have a set of procedural rules and regulations and practices
+                                like official buildings. They can build houses according to local natural conditions,
+                                their own economic level and the characteristics of building materials. The
+                                characteristics of folk dwellings mainly come from the national living customs,
+                                production mode, religious belief, psychological hobby and aesthetic concept, while the
+                                experience of folk dwellings comes from the local natural environment and climatic and
+                                geographical conditions. These two are inseparable, are closely related, they together
+                                constitute the national cultural characteristics and local characteristics of
+                                dwellings. </p>
+                        </div>
+                    </div>
+                </div>
+            </div1>
+
+        </div>
+
+
+    </div>
+</div>
+</div>
+
+<div class="block mainbox">
+    <h2 class="title">Architecture introduction</h2>
+    <p class="sub-title">Appreciate different geographical cultures</p>
+    <div class="box1">
+        <div class="pic" style="background-size: cover">
+            <div class="mask">stilted building</div>
+        </div>
+        <div class="textt"><p> Stilted buildings are traditional dwellings of Miao, Zhuang, Buyi and other
+            nationalities. The basic characteristics of stilted buildings are that the main house is built on the
+            ground, and the wing room is usually partially suspended and supported by pillars, which belongs to the
+            semi-dry column architecture, </p>
+            <p> Distribution range: southeast of Guizhou, west of Hunan, north of Guangxi, west of Hubei, etc. </p>
+            <p> The natural environment: mainly related to rugged mountainous terrain, small building area, in addition
+                to play a role in ventilation and drying, guard against wild animals and poisonous snakes.
+            </p></div>
+        <div class="textt"><p> Dai bamboo house is typical of the inherent of the building, is the upper and lower layer
+            of tall buildings.
+            The bottom floor is generally not human, used for raising livestock, poultry, the upper floor for people to
+            live, belongs to the dry column type building.
+        </p>
+            <p> Distribution range: Yunnan, mainly in Xishuangbanna.
+            </p>
+            <p> The relationship between high feet and natural environment: high feet are designed to block the moisture
+                on the ground and facilitate air circulation to ventilate and dehumidify, so as to adapt to the high
+                temperature and rainy climate.
+                In addition, it is simple and easy to build, and can avoid floods and insects and snakes.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p2.png);background-size: cover">
+            <div class="mask">Dai bamboo house</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p3.jpg);background-size: cover">
+            <div class="mask">High-platform dwellings</div>
+        </div>
+        <div class="textt">
+            <p> High-platform dwellings are the Uyghur inhabited areas in the northeast of the old city of Kashgar,
+                Xinjiang, which are built more than 600 years ago on the loess high cliff with a height of more than 40
+                meters and a length of over 800 meters.
+            </p>
+            <p> Relationship with the natural environment: the high cliff is more than 30 meters from the ground,
+                commanding, fresh air, can be protected from floods, rainstorm disasters.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Beijing siheyuan is also called snap room, is a traditional courtyard architecture, basic pattern for a
+                courtyard houses built all around, from all around the courtyard camp in the middle.
+            </p>
+            <p> cultural connotation: reflects the traditional concept of residence. The principal room is for the
+                elders to live, and the wing room is for the descendants to live, with a clear hierarchy and orderly
+                hierarchy.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p4.png);background-size: cover">
+            <div class="mask">Beijing siheyuan</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p5.png);background-size: cover">
+            <div class="mask">Cave dwelling</div>
+        </div>
+        <div class="textt">
+            <p> Cave dwelling is an ancient dwelling form on the Loess Plateau, which belongs to the remains of "cave
+                dwelling".
+            </p>
+            <p> Distribution area: Shaanxi, Shanxi, Henan, Hebei, Inner Mongolia, Gansu and Ningxia provinces </p>
+            <p> Relationship between natural environment: thick loess layer, tight structure and strong vertical, not
+                easy to collapse;
+                Loess has strong thermal insulation, which can make the house warm in winter and cool in summer and
+                adapt to the local climate conditions.
+            </p>
+        </div>
+        <div class="textt">
+            <p> DeKengYuan also called courtyard courtyard, belongs to the underground caves, is also the legacy of the
+                ancient people cave style, known as a "siheyuan" underground in northern China.
+            </p>
+            <p> distribution range: Henan, Shanxi, Gansu, Shaanxi, etc. </p>
+            <p>
+                Relationship with the natural environment: besides has the characteristics of the cave, still need to
+                consider the influence of rainstorm and flood, DeKengYuan construction in the loess YuanShang, usually
+                in the average annual rainfall of 500 mm and the region around, there are few heavy rain occurred, and
+                loess tableland on three sides is gullies, rain water outlet unobstructed, also won't hurt DeKengYuan
+                group.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p6.jpg);background-size: cover">
+            <div class="mask">DeKengYuan</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p7.jpg);background-size: cover">
+            <div class="mask">Hakka tulou</div>
+        </div>
+        <div class="textt">
+            <p> Hakka tulou, also known as fujian tulou in fujian longyan, zhangzhou NaJing in yongding tulou is most
+                famous.
+            </p>
+            <p> Distribution range: Fujian, Jiangxi, Guangdong </p>
+            <p> Relation between the natural environment: As the flat land has been occupied by the aboriginal people,
+                the Hakkas, as immigrants, can only build their houses on the narrow flat ground or gentle slope among
+                the mountains. Tulou can defend against bandits and wild animals in the mountains, and they are also
+                featured with shock resistance, fire prevention, good ventilation and lighting.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Hakka dragon house is also known as Hakka dragon house, which is a kind of Hakka dwellings.
+            </p>
+            <p> distribution area: mainly distributed in Meizhou (the most), Shenzhen, Heyuan, Huizhou, Longyan, Fujian,
+                etc.
+            </p>
+            <p> Differences between the Wailong House and the Tulou: Tulou highlights the equal relationship between
+                families in terms of living, while the Wailong House is orderly and hierarchical.
+                The round building is a fully enclosed structure, highlighting its defensive function;
+                The Wai Dragon House is open, highlighting the function of the ancestral hall.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p8.jpg);background-size: cover">
+            <div class="mask">Hakka dragon house</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p9.png);background-size: cover">
+            <div class="mask">Xiguan Dawu</div>
+        </div>
+        <div class="textt">
+            <p> Xiguan Dawu, commonly known as Old Dawu, is a traditional residential house with Lingnan characteristics
+                built around Xiguan in Guangzhou.
+            </p>
+            <p> Cultural Background: Most of the buildings were built in the Qing Dynasty for famous families and
+                bureaucrats, and the interior also reflects the architectural pattern of well-defined hierarchy and
+                orderly hierarchy.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Blockhouse is a common residence form in Qinghai-Tibet Plateau area, and it is a kind of house built
+                with stone or earth.
+            </p>
+            <p> Geographical background: wide at the bottom and narrow at the top, with the characteristics of solid and
+                stable, tight structure, conducive to wind and cold, easy to guard against theft and enemy.
+            </p>
+        </div>
+        <div class="pic" style="background:url(statics/images/p10.jpg);background-size: cover">
+            <div class="mask">Blockhouse</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p11.jpg);background-size: cover">
+            <div class="mask">Kaiping Diaolou</div>
+        </div>
+        <div class="textt">
+            <p> Kaiping Diaolou is located in Kaiping City, Guangdong Province. It is a multi-story tower building
+                integrating defense and residence.
+            </p>
+            <p>
+                Cultural implication/geographical background: Kaiping is located at the junction of four counties. In
+                ancient times, the management of Kaiping was chaotic, bandits were rampant, there were many rivers, and
+                flood disasters were frequent. Local people were forced to build diaotou in the village to protect
+                themselves.
+                In addition, there are a large number of overseas Chinese living in this area. Diaolou is mostly the
+                product of the integration of western architectural art and local architectural art.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Arcade Building is a kind of commercial and residential building emerging in modern times. Its basic
+                feature is the porch type building with the ground floor receding along the street and setting aside
+                pedestrian space.
+            </p>
+            <p> distribution range: Hainan, Guangdong, Guangxi, Fujian and other regions </p>
+            <p> and the relationship between the natural environment: can block the sun in the scorching sun, can also
+                be in the storm wind shelter.
+            </p>
+            <p> Cultural Connotations: This kind of architecture is very popular in Southeast Asia. The Chinese people
+                who returned home from Southeast Asia also built similar arcade buildings in South China, which reflects
+                the characteristics of the combination of Chinese and Western cultures.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p12.jpg);background-size: cover">
+            <div class="mask">Arcade Building</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p13.png);background-size: cover">
+            <div class="mask">Yikeyin dwellings</div>
+        </div>
+        <div class="textt">
+            <p> The Yikeyin dwellings were jointly created by the Han and Yi ancestors and first emerged in Kunming
+                area. The basic pattern is "three rooms and two ears inverted eight feet", and the plane is nearly
+                square.
+            </p>
+            <p> Cultural connotation: It began to evolve on the basis of the architecture of the Han Siheyuan, and
+                gradually formed the basic pattern and shape of "three rooms, four ears and eight feet" in the early
+                Qing Dynasty.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Hui-style folk houses, also known as folk houses in southern Anhui, are typically characterized by white
+                walls and green tiles, carved stone Windows, carved wood column and horse-head wall.
+            </p>
+            <p> Distribution area: Ancient Huizhou area (Huangshan, Wuyuan and Jixi), Panhui area (such as Chunan,
+                Zhejiang and Fuliang, Jiangxi) and parts of southern Anhui around Huizhou.
+            </p>
+            <p> and natural environment: Hui-style architecture has many wooden materials and dense buildings, so
+                attention should be paid to fire prevention. The design of horse-head wall can prevent the spread of
+                fire.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p14.png);background-size: cover">
+            <div class="mask">Hui-style folk houses</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p15.png);background-size: cover">
+            <div class="mask">Yurt</div>
+        </div>
+        <div class="textt">
+            <p> Yurt is a kind of house which is suitable for nomadic life, mainly distributed in Inner Mongolia.
+            </p>
+            <p> Geographical background: The yurt is easy to build, easy to disassemble and move, so it is suitable for
+                rotating grazing field to live in.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Pingtan Stone House is a kind of stone house which is located in Pingtan County, Fujian Province. It is
+                mainly made of granite and volcanic rock, which are native to the island.
+            </p>
+            <p>The relationship between > and natural environment: Pingtan Duo typhoon.
+                There is a local saying: "On Pingtan Island, only stones grow but not grass. The ground is covered with
+                sand and the house looks like a fortress." This saying vividly illustrates the windproof function of
+                stone houses.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p16.jpg);background-size: cover">
+            <div class="mask">Pingtan Stone House</div>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p17.jpg);background-size: cover">
+            <div class="mask">Seaweed house</div>
+        </div>
+        <div class="textt">
+            <p> On the wall of the house which is mixed with stones or bricks, the special kelp grass mat is used to
+                form the roof of the house with seaweed.
+            </p>
+            <p>Distribution area: is mainly distributed in coastal areas such as Weihai, Yantai and Qingdao of Jiaodong
+                Peninsula in China.
+            </p>
+            <p> Relationship with the natural environment: the local seagrass is rich in resources, durable and
+                resistant to decay. The roof made of seagrass can prevent leakage and absorb moisture and is not easy to
+                burn. The design of the triangular steep slope of the roof ADAPTS to the natural conditions of rainy
+                summer.
+            </p>
+        </div>
+        <div class="textt">
+            <p> Shikumen is a new type of modern architecture that integrates Chinese and Western culture.
+                It is the most characteristic of Shanghai dwellings </p>
+            <p> Shikumen has absorbed a lot of the style of folk houses of the Han nationality in the south of the
+                Yangtze River, with stone as the door frame and black lacquer wood as the door door.
+                Origins in the Taiping Heavenly Kingdom period, the war forced the rich businessmen, officials and
+                gentry in Jiangsu and Zhejiang to seek refuge in the concession, foreign real estate developers took the
+                opportunity to build a large number of similar houses.
+            </p>
+        </div>
+        <div class="pic" style="background:url(./statics/images/p18.jpg);background-size: cover">
+            <div class="mask">Shikumen</div>
+        </div>
+        <div class="pic">
+            <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=q3226jpum09" width="100%"
+                    height="100%"allowFullScreen="true"></iframe>
+        </div>
+        <div class="textt">Cave dwellings: Watch the video</div>
+        <div class="textt">Hakka tulou: Watch the video</div>
+        <div class="pic">
+            <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=n037341j3iv" width="100%"
+                    height="100%" allowFullScreen="true"></iframe>
+
+        </div>
+        <br>
+        <br>
+    </div>
+
+</div>
+<!--尾部-->
+<div class="footer"></div>
+</body>
+
+</html>
+<script type="text/javascript">
+    //导航固定
+    $(window).scroll(function () {
+        var height = $(document).scrollTop()
+        console.log(height)
+        if (height > 150) {
+            $('.header').addClass('fixed')
+        } else {
+            $('.header').removeClass('fixed')
+        }
+    })
+    //案例
+    $('.case ul li').hover(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    //轮播图，使用的是swiper插件
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        loop: true,
+        autoplay: 2500
+    });
+    var swiper = new Swiper('.swiper-container2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+</script>

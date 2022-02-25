@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NATURAL GEOGRAPHY</title>
+    <link rel="stylesheet" type="text/css" href="statics/css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="statics/css/styleYuan.css"/>
+    <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="statics/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <style type="text/css">
+        .header.fixed {
+            position: fixed;
+            background: rgba(223, 162, 253, 0.8);
+            height: 60px;
+            transition: all .3s;
+        }
+        .logo{
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<!--头部导航-->
+<div class="header">
+    <div class="logo">
+        <img src="statics/images/logo.png" width="50px" height="50px">
+    </div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="./Home/first.html">HOME</a>
+            </li>
+            <li>
+                <a href="./dialect.html">DIALECT</a>
+            </li>
+            <li>
+                <a href="./cuisine.html">CUISINE</a>
+            </li>
+            <li>
+                <a href="./population.html">POPULATION</a>
+            </li>
+            <li>
+                <a href="./humanity.html">NATIONALITY</a>
+            </li>
+            <li>
+                <a href="./architecture.html">ARCHITECTURE</a>
+            </li>
+            <li class="active">
+                <a href="">NATURAL GEOGRAPHY</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--轮播图-->
+<div class="slider swiper-container">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+
+            <div class="picslider1" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Terrain</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">"China's altitude distribution is in the form of a three-level ladder."</p>
+            </div>
+        </li>
+        <li class="swiper-slide">
+
+            <div class="picslider2" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Precipitation</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">"Precipitation is concentrated in summer and autumn, with more in the south and less in the north."</p>
+            </div>
+        </li>
+        <li class="swiper-slide">
+
+            <div class="picslider3" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Climate</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">"The climate of China is mainly affected by the monsoon circulation, which forms a complex climate due to the variability of the terrain."</p>
+            </div>
+        </li>
+        <li class="swiper-slide">
+
+            <div class="picslider4" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Lake</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">"There are many lakes in China, with a total of more than 24,800 lakes."</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="services">
+    <div class="services-box">
+        <div class="number">
+            <ul>
+                <li>
+                    <div class="picoverview2"></div>
+                </li>
+                <li>
+                    <p class="title">9.6</p >
+                    <p class="desc">million square kilometers</p >
+                </li>
+                <li>
+                    <p class="title">3</p >
+                    <p class="desc">levels of attitude</p >
+                </li>
+                <li>
+                    <p class="title">600<sub>+</sub></p >
+                    <p class="desc">mm of annual average precipitation</p >
+                </li>
+                <li>
+                    <p class="title">6</p >
+                    <p class="desc">climate zones</p >
+                </li>
+                <li>
+                    <p class="title">24800<sub>+</sub></p >
+                    <p class="desc">lakes</p >
+                </li>
+                <li>
+                    <div class="picoverview3"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="block mainbox">
+    <p></p></br>
+    <p></p></br>
+    <p></p></br>
+    <p></p></br>
+    <h2 class="titleT">Terrain</h2>
+    <div class="box1">
+        <div class="pic1" style="background-size: cover"></div>
+        <div class="textt"><p>China has diverse terrains, including majestic plateaus, undulating mountains, vast plains, low hills, and large and small basins surrounded by mountains and low in the middle. The five basic terrain types on land are distributed in China. The mountain area accounts for 2/3 of the country's total area.</p></br>
+            <p>The terrain of China is high in the west and low in the east, and is roughly distributed in a stepped manner. The first step of the terrain is the Qinghai-Tibet Plateau, with an average elevation of more than 4,000 meters. The Kunlun Mountains, Qilian Mountains, and Hengduan Mountains are distributed along the northern and eastern edges, which are the boundary between the first and second levels of terrain. </p></br>
+            <p>The second step of the terrain is distributed with large basins and plateaus, with an average elevation of 1,000-2,000 meters. The Daxinganling, Taihang Mountains, Wushan, and Xuefeng Mountains to the east are the boundaries between the second and third steps of the terrain. </p></br>
+            <p>On the third step of the terrain, there are vast plains with hills and low mountains in between, and the altitude is mostly below 500 meters. If you pass through the 32°N latitude line, make a topographical profile of China from west to east. From the large plateau in the west, to the basin in the middle, to the eastern plain, the west is high and the east is low.</p></br>
+            <p>From the third step of the Chinese landmass, it continues to extend below the sea surface, which is the shallow sea continental shelf. This is the part of the continent that naturally extends to the ocean. It is generally not deep, has a gentle slope, and is rich in marine resources.</p></div>
+    </div>
+    <h2 class="titleT">Precipitation</h2>
+    <div class="box1">
+        <div class="pic2" style="background-size: cover"></div>
+        <div class="textt"><p>Precipitation in China generally follows the same pattern as temperatures, decreasing from the southeast to the northwest. The annual total of certain areas along the southeastern coast amounts to more than 80 inches (2,000 mm). The Yangtze valley receives about 40 to 45 inches (1,000 to 1,150 mm). Farther north, in the Huai River valley, the annual rainfall decreases to some 35 inches (880 mm). In the lower reaches of the Huang He, only 20 to 25 inches (500 to 650 mm) falls annually. The Northeast generally receives more precipitation than the North China Plain, with upwards of 40 or more inches falling in the Changbai Mountains.</p></br>
+            <p>The high variability of precipitation is another characteristic of China’s climate. Usually, variability increases as annual amounts decrease, a circumstance that is closely connected with the country’s high frequency of drought and flood. Spring rain is of immense significance to Chinese farmers, but spring is also the season with the highest variability. In South China the variability exceeds 40 percent, along the Yangtze it is about 45 percent, and in North China it is more than 50 percent. The variability of a vast area in North China exceeds 70 percent in some places; east of Beijing, for example, the rainfall variability in spring may even exceed 80 percent, as it also does in the central parts of the Yunnan-Guizhou Plateau.</p></br>
+            <p>Rain falls mostly in the summer months, when plants need water the most. This is an important asset for farmers, but summer rainfall is usually too intense. In July, when the frontal zone shifts northward, cyclones (circulation of winds around centres of low atmospheric pressure) are much more active in North China than in South China, and North China begins to receive heavier rainfall. More than half the area of the North China Plain records 0.8 inch (20 mm) of rainfall daily, and in some places it may reach as much as 1 inch (25 mm) or more daily. During that time, areas south of the Yangtze are covered by the tropical Pacific air mass, so that the weather becomes comparatively stable, the amount of rainfall usually decreases, and the average rainfall intensity is less than that of June. The intensity of August rainfall is in general less than that of July.</p></br>
+            <p>In the southeastern coastal regions, around Fuzhou and Shantou, the maximum daily rainfall may even approach 12 inches (300 mm). Such accumulations are directly related to the high frequency of typhoons (tropical cyclones) striking that part of the coast, usually during the period from May to November; July, August, and September are the three months when typhoons are the most frequent.</p></br>
+            <p>In May, typhoons usually strike the coast south of Shantou. Later in June they shift northward, arriving between Shantou and Wenzhou, and after July they invade areas north of Wenzhou. August has the highest frequency of typhoon invasions, when more than one-third of the typhoons reaching China arrive. After September the frequency of typhoons decreases, and the pattern again shifts southward. In October, typhoons usually land south of Wenzhou; the late typhoons arriving in November and December strike south of Shantou.</p>
+        </div>
+    </div>
+    <h2 class="titleT">Climate</h2>
+    <div class="box1">
+        <div class="pic3" style="background-size: cover"></div>
+        <div class="textt"><p>The climate of China is mainly affected by the monsoon circulation, which forms a complex climate due to the variability of the terrain. Roughly bounded by the Gangdise Mountains, the Bayan Har Mountains, the Yin Mountains, the Helan Mountains, and the Greater Khingan Mountains, it is divided into the eastern monsoon region, the western dry region and the alpine region. Taking the Kunlun Mountains, Altun Mountains, Qilian Mountains, and Hengduan Mountains as the rough geographic boundaries, it distinguishes the arid and semi-arid regions in the northwest, the monsoon regions in the east, and the Qinghai-Tibet alpine region.</p></br>
+            <p>The topographic unit of the monsoon region includes the Northeast Plain, the North China Plain (Huanghuaihai Plain), the Middle and Lower Yangtze Plain, the Loess Plateau, the Sichuan Basin, the Yunnan-Guizhou Plateau, the hills of Shandong and the hills of the South of the Yangtze River. Because of the difference in latitude, it can be divided into three monsoon climate zones: tropical, subtropical, and temperate.</p></br>
+            <p>The north-south direction of China spans a large latitude, and there is a certain difference in temperature between the north and the south. In winter, there is a big difference in temperature between north and south in China. The 0℃ isotherm is roughly distributed along the Qinling-Huaihe line; the January average temperature difference between Mohe Town and Haikou City is close to 50℃. In summer, except for areas such as the Qinghai-Tibet Plateau, the average temperature in July is mostly above 20°C.</p></br>
+            <p>The coldest place in China in winter is in Mohe Town, Heilongjiang. The average temperature in January is -30.6°C, and the extreme minimum temperature is -52.3°C. The hottest place is near the Xisha Islands, with an average temperature of 22.9°C in January. The hottest place in China in summer is Turpan in Xinjiang Autonomous Region. The average temperature in July is 33℃ and the extreme maximum temperature is 49.6℃.</p></br>
+        </div>
+        <br>
+    </div>
+    <h2 class="titleT">Lake</h2>
+    <div class="box1">
+        <div class="pic4" style="background-size: cover"></div>
+        <div class="textt"><p>There are many lakes in China, with a total of more than 24,800 lakes, of which there are more than 2,800 natural lakes with an area of more than 1 square kilometer. Mainly concentrated in the middle and lower reaches of the Yangtze River. The top five lakes by area are: Qinghai Lake, Poyang Lake, Dongting Lake, Tai Lake, and Hulun Lake.</p></br>
+            <p>The lakes in the outflow area are connected to the outflow river, and the lake water can flow in and out, and it contains less salinity. It is called a freshwater lake or a drainage lake. The famous freshwater lakes in China include Poyang Lake, Dongting Lake, Tai Lake, Hongze Lake, Chao Lake and so on.</p></br>
+            <p>Most of the lakes in the inward flow area are the destination of inward rivers. The lake water can only flow in but not flow out. Because of strong evaporation and high salt content, saltwater lakes are formed. They are also called non-drainage lakes, such as Qinghai Lake, the largest lake in China, and its high altitude. Nam Co Lake and so on.</p></br>
+            <p>According to the genesis of China’s lakes, there are river trace lakes (such as lakes along the Yangtze River in Hubei), sea trace lakes (ie Sui Lake, such as West Lake), dissolution lakes (such as lakes formed by the erosion of limestone in the Yunnan-Guizhou Plateau), and glacial lakes ( Such as some lakes in the Qinghai-Tibet Plateau), structural lakes (such as Qinghai Lake, Poyang Lake, Dongting Lake, Dianchi Lake, etc.), crater lakes (such as Changbai Mountain Tianchi), barrier lakes (such as Jingbo Lake), artificial lakes (runansu, Henan) Duck Lake) and so on.</p>
+        </div>
+    </div>
+    <script>
+        var mcharts = echarts.init(document.getElementById('chart1'))
+        var option = {
+            title: {
+                text: '居住人口数',
+                x: 'center',
+                y: 'bottom',
+                textStyle: {
+                    fontFamily: 'Arial',
+                    fontSize: 20,
+                    fontStyle: 'normal',
+                    fontWeight: 'normal'
+                },
+            },
+
+            tooltip: {
+                trigger: 'item',
+                triggerOn: 'mousemove'
+            },
+            grid: {
+                top: '20%',//距上边距
+
+            },
+            legend: {
+                data: ['series 1'],
+                x: 'right',
+                y: 'top'
+            },
+            xAxis: {
+                data: ["1", "2", "3"],
+            },
+            yAxis: {},
+            series: [{
+                name: 'series 1',
+                type: 'bar',
+                data: [5, 6, 7],
+                barWidth: 30,
+                itemStyle: {
+                    color: '#4c80e760'
+                },
+            }]
+        }
+        mcharts.setOption(option);
+
+    </script>
+</div>
+<!--尾部-->
+<div class="footer">
+</div>
+</body>
+
+</html>
+<script type="text/javascript">
+    //导航固定
+    $(window).scroll(function () {
+        var height = $(document).scrollTop()
+        console.log(height)
+        if (height > 150) {
+            $('.header').addClass('fixed')
+        } else {
+            $('.header').removeClass('fixed')
+        }
+    })
+    //案例
+    $('.case ul li').hover(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    //轮播图，使用的是swiper插件
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        loop: true,
+        autoplay: 2500
+    });
+    var swiper = new Swiper('.swiper-container2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+</script>

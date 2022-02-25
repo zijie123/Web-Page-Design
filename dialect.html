@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Dialect</title>
+	<link rel="stylesheet" type="text/css" href="statics/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="statics/css/stylezheng.css" />
+	<link rel="stylesheet" type="text/css" href="statics/css/fangyanstyle.css" />
+	<script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="statics/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+	<style type="text/css">
+		.header.fixed {
+			position: fixed;
+			background: rgba(243, 212, 31, 0.5);
+			height: 60px;
+			transition: all .3s;
+		}
+		.logo{
+			margin: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--头部导航-->
+	<div class="header">
+		<div class="logo">
+			<img src="statics/images/logo.png" width="50px" height="50px">
+		</div>
+
+		<div id="scrollWindow">
+			<a href="javascript:void(0);" onclick="closediv()" title="点击关闭"
+				style="text-decoration:none;position: absolute;left: 0px;color: white;">X</a>
+			<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD%E6%96%B9%E8%A8%80/11013054?fr=aladdin"
+				target="_blank">
+				<img src="./statics/images/yidong.png" width="200px" height="200px" />
+			</a>
+		</div>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="./Home/first.html">HOME</a>
+				</li>
+				<li class="active">
+					<a href="" >DIALECT</a>
+				</li>
+				<li>
+					<a href="./cuisine.html">CUISINE</a>
+				</li>
+				<li>
+					<a href="./population.html">POPULATION</a>
+				</li>
+				<li>
+					<a href="./humanity.html">NATIONALITY</a>
+				</li>
+				
+					<a href="./architecture.html">ARCHITECTURE</a>
+				</li>
+				<li>
+					<a href="./nature.html">NATURAL GEOGRAPHY</a>
+				</li>
+			</ul>
+		</div>
+		<div class="mobile-nav"></div>
+	</div>
+
+	<!--轮播图-->
+	<div class="slider swiper-container">
+		<ul class="swiper-wrapper">
+			<li class="swiper-slide">
+				<div class="picslider1" style="background-size: cover;"></div>
+
+				<div class="slider-txt">
+					<h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Humanities
+						geography~dialect</h3>
+					<p class="sub-title" style="text-shadow: 0 0 4px #afafaf, 0 0 4px #727272; ">
+						Dialect represents the foundation of a region: a region without its own dialect is equivalent to
+						the loss of its culture, and the loss of culture is equivalent to the loss of its foundation</p>
+				</div>
+			</li>
+			<li class="swiper-slide">
+
+				<div class="picslider2" style="background-size: cover;"></div>
+				<img src="statics/images/banner.jpg" />
+				<div class="slider-txt">
+					<h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Geography of China</h3>
+					<p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">A panoramic view of the
+						magnificent picture of Shenzhou and the magical landscape of China</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+
+	<script type="text/javascript">
+		var timer1 = null;
+		window.onload = function () {
+			var flag = isPC();
+			if (!flag) {
+				closediv();
+				return;
+			}
+			var demo = document.getElementById('scrollWindow');
+			var sx = sy = 1;
+			var x = y = 0;
+			function move() {
+				if (document.documentElement.clientWidth - demo.offsetWidth < x || x < 0) {
+					sx = -sx;
+				}
+				if (document.documentElement.clientHeight - demo.offsetHeight < y || y < 0) {
+					sy = -sy;
+				}
+				x = demo.offsetLeft + sx;
+				y = demo.offsetTop + sy;
+				demo.style.left = x + 'px';
+				demo.style.top = y + 'px';
+			}
+			var timer1 = setInterval(move, 10);
+			demo.onmouseover = function () {
+				clearInterval(timer1);
+			}
+			demo.onmouseout = function () {
+				timer1 = setInterval(move, 10);
+			}
+		}
+		function closediv() {
+			document.getElementById("scrollWindow").parentNode.removeChild(document.getElementById("scrollWindow"));
+		}
+
+		function isPC() {
+			var userAgentInfo = navigator.userAgent;
+			var Agents = ["Android", "iPhone",
+				"SymbianOS", "Windows Phone",
+				"iPad", "iPod"];
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		}
+	</script>
+
+
+	<div style="overflow: hidden;" class="chineseDialect">
+		<h1 style="text-align: center;">Chinese dialects</h1>
+		<p>There are many factors in dialect formation, including social, historical and geographical
+			factors, such as long-term small-scale agricultural economy, social division, migration of population, and
+			barrier of mountains and rivers; There are also factors that belong to the language itself, such as the
+			imbalance of language development, the conflict and influence between different languages. Modern Chinese
+			has different dialects, and they are widely distributed in different areas.</p>
+		<img id="pic1" src=./statics/images/fangyanpicture1.jpg width="100" height="100" />
+		<img id="pic2" src=./statics/images/fangyanpicture2.jpg width="100" height="100" />
+		<img id="pic3" src=./statics/images/fangyanpicture3.jpg width="100" height="100" />
+	</div>
+	<div style="overflow: hidden;" class="difference">
+		<h1 style="text-align: center;">Dialectal variation</h1>
+		<div style="left: 20%; position: absolute; top:23%;font-weight:bold;">
+			<p>The differences among modern Chinese dialects are manifested in phonetics, vocabulary and
+				grammar, especially in phonetics.</p>
+			<p>According to dialects, Chinese can be divided into seven categories: Mandarin dialects and
+				other six southern dialects. Corresponding to Guangyun, it belongs to the descendants of middle ancient
+				Chinese</p>
+			<img id="pic4" src=./statics/images/fangyanpicture4.jpg width="100" height="100" />
+		</div>
+	</div>
+
+	<div style="overflow: hidden;" class="develop">
+		<p id="text2">Development history</p>
+		<p></p>
+		<p></p>
+		<div style="left:0%; position: absolute; top:25%; width:20vw; height:30vh;">
+			<img src=./statics/images/fangyanpicture5.jpg width="130" height="200" />
+		</div>
+		<div style="left: 25%; position: absolute; top:33%;">
+			<p id="text1">Chinese linguists have been arguing about the division of Chinese dialects. Some people divide
+				Chinese into seven dialects, some into five dialects, others into six dialects, eight dialects and even
+				ten dialects. But what we all agree with is that no matter what kind of division method is adopted, the
+				internal users of these "big dialects" sometimes can't understand each other. In different dialect
+				areas, people's dialect consciousness is also different. Chinese dialects can also be divided into many
+				sub dialects, which can be subdivided into a number of small pieces and dialect points.</p>
+		</div>
+	</div>
+
+	<div style="overflow: hidden;" class="logo1">
+
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="firstone" src="./statics/video/东北.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="1">
+				Northeastern mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="secondone" src="./statics/video/北京.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="2">
+				Peking Mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="thirdone" src="./statics/video/河北.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="3">
+				Jilu Mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="forthone" src="./statics/video/Shandong.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="4">
+				Jiaodong Mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="fiveone" src="./statics/video/河南.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="5">
+				zhongyuan mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="sixthone" src="./statics/video/兰州.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="6">
+				LAN Yin Mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0;text-align: center;">
+			<audio id="seventhone" src="./statics/video/四川.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="7">
+				Southwestern Mandarin
+			</button>
+		</p>
+		<p style="margin:10px 0; text-align:center;">
+			<audio id="elethone" src="./statics/video/Zhengjiang.mp3">
+			</audio>
+			<button class="using" onclick="play(this.id)" id="8">
+				Jianghuai Mandarin
+			</button>
+		</p>
+	</div>
+
+	<script type="text/javascript">
+		var isPlaying = false;
+		function play(buttonID) {
+			if (buttonID == "1") {
+				var player = document.getElementById("firstone");
+			}
+			else if (buttonID == "2") {
+				var player = document.getElementById("secondone");
+			}
+			else if (buttonID == "4") {
+				var player = document.getElementById("forthone");
+			}
+			else if (buttonID == "5") {
+				var player = document.getElementById("fiveone");
+			}
+			else if (buttonID == "7") {
+				var player = document.getElementById("seventhone");
+			}
+			else if (buttonID == "8") {
+				var player = document.getElementById("elethone");
+			}
+
+			if (isPlaying) {
+				player.pause();
+				player.src = '';
+			}
+			else {
+				if (buttonID == "1") {
+					player.src = './statics/video/东北.mp3';
+					player.play();
+				}
+
+				else if (buttonID == "2") {
+					player.src = './statics/video/北京.mp3';
+					player.play();
+				}
+
+				else if (buttonID == "4") {
+					player.src = './statics/video/山东.mp3';
+					player.play();
+				}
+
+				else if (buttonID == "5") {
+					player.src = './statics/video/河南.mp3';
+					player.play();
+				}
+				else if (buttonID == "7") {
+					player.src = './statics/video/四川.mp3';
+					player.play();
+				}
+				else if (buttonID == "8") {
+					player.src = './statics/video/上海.mp3';
+					player.play();
+				}
+			}
+			isPlaying = !isPlaying;//加上这句话就对了！
+		}
+	</script>
+
+	<div class="mapp">
+
+	</div>
+	<div class="last">
+	</div>
+	<div class="circle">
+
+	</div>
+
+	<div class="warp">
+		<iframe src="https://player.bilibili.com/player.html?aid=29009413&bvid=BV1Ls411u7vz&cid=51101238&page=1"
+			scrolling="no" border="0" frameborder="no" framespacing="0" width="100%" height="100%"
+			allowfullscreen="true"> </iframe>
+
+	</div>
+
+	<div class="services">
+		<div class="services-box">
+			<div class="number">
+				<ul>
+					<li>
+						<div class="picoverview2"></div>
+					</li>
+					<li>
+						<p class="title">96<span>hundred million</span></p>
+						<p class="desc">square kilometre</p>
+					</li>
+					<li>
+						<p class="title">8<sub>+</sub></p>
+						<p class="desc">dialects</p>
+					</li>
+
+					<li>
+						<div class="picoverview3"></div>
+					</li>
+				</ul>
+			</div>
+
+
+
+		</div>
+	</div>
+		<!-- 尾部-->
+</body>
+
+</html>
+<script type="text/javascript">
+	//导航固定
+	$(window).scroll(function () {
+		var height = $(document).scrollTop()
+		console.log(height)
+		if (height > 150) {
+			$('.header').addClass('fixed')
+		} else {
+			$('.header').removeClass('fixed')
+		}
+	})
+	//案例
+	$('.case ul li').hover(function () {
+		$(this).addClass('active').siblings().removeClass('active')
+	})
+	//轮播图，使用的是swiper插件
+	var swiper = new Swiper('.swiper-container', {
+		paginationClickable: true,
+		loop: true,
+		autoplay: 2500
+	});
+	var swiper = new Swiper('.swiper-container2', {
+		pagination: '.swiper-pagination',
+		paginationClickable: true,
+		loop: true,
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+	});
+</script>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>architecture</title>
+    <link rel="stylesheet" type="text/css" href="statics/css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="statics/css/stylehe.css"/>
+
+    <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="statics/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <style>
+        .header.fixed {
+            position: fixed;
+            background: rgba(255, 155, 59, 0.8);
+            height: 60px;
+            transition: all .3s;
+        }
+        .header .nav ul li {
+            display: flex;
+            align-items: center;
+            margin: 0 30px;
+            font-size: 16px;
+            position: relative;
+            text-shadow: 0 0 2vh rgb(64, 64, 64), 0 0 2vh #ffd897;
+        }
+        .logo{
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<!--头部导航-->
+<div class="header">
+    <div class="logo">
+        <img src="statics/images/logo.png" width="50" height="50">
+    </div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="./Home/first.html">HOME</a>
+            </li>
+            <li>
+                <a href="./dialect.html">DIALECT</a>
+            </li>
+            <li class="active">
+                <a href="">CUISINE</a>
+            </li>
+            <li>
+                <a href="./population.html">POPULATION</a>
+            </li>
+            <li>
+                <a href="./humanity.html">NATIONALITY</a>
+            </li>
+            <li>
+                <a href="./architecture.html">ARCHITECTURE</a>
+            </li>
+            <li>
+                <a href="./nature.html">NATURAL GEOGRAPHY</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--轮播图-->
+<div class="slider swiper-container">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+            <div class="beijing1" style="background-size: cover"></div>
+
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 2vh rgb(138,140,140), 0 0 2vh #d6dad2; ">HUMAN GEOGRAPHY-CUISINE</h3>
+                <p class="sub-title" style="text-shadow: 0 0 4vh #b0b2b2, 0 0 4vh #d6dad2; ">
+                    Shandong, Sichuan, Guangdong, Jiangsu, Fujian, Zhejiang, Hunan, AnHui
+                </p>
+            </div>
+        </li>
+        <li class="swiper-slide">
+
+            <div class="beijing2" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">)
+                <h3 class="title" style="text-shadow: 0 0 2vh rgb(0,0,0), 0 0 2vh #d6dad2;">CHINESE GEOGRAPHICAL CUISINE</h3>
+                <p class="sub-title" style="text-shadow: 0 0 4vh #afafaf, 0 0 4vh #727272; ">One of a rice porridge, when the thought did not come easily</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--服务-->
+<div class="services">
+    <div class="services-box">
+        <!--数字统计-->
+        <div class="number">
+            <ul>
+                <li>
+                    <div class="picoverview2"></div>
+                </li>
+                <li>
+                    <p class="title">14<span>billion</span></p>
+                    <p class="desc">A population of 1.4 billion</p>
+                </li>
+                <li>
+                    <p class="title">8<sub>+</sub></p>
+                    <p class="desc">Chinese eight cuisines</p>
+                </li>
+
+                <li>
+                    <div class="picoverview3"></div>
+                </li>
+            </ul>
+        </div>
+
+
+
+        <!--导航栏-->
+        <div class="modback">
+            <h1 class="modbigtitle">INTRODUCTION TO CHINESE GEOGRAPHICAL CUISINE</h1>
+            <h1 class="note1">(Click the subtitle below to jump directly)</h1>
+            <div align="center" >
+                | <a href="#A1" class="modsecond">Knowledge Introduction</a> |
+                <a href="#A2" class="modsecond">Attachment Interaction</a> |
+                <a href="#A3" class="modsecond">Video introduction </a> |
+            </div>
+            <div>
+                <p class="modfen"></p>
+            </div>
+
+            <h2>
+                ⊚ <a name="A1" class="modti">Knowledge Introduction</a>
+            </h2>
+
+
+
+                <div class="try1">
+                    <div class="c0">
+                        <img src="statics/images/lu1.jpg" alt=""/>
+                    </div>
+                    <div class="cu1">
+                        <h1 class="modTitle">Shandong cuisine</h1>
+                        <p class="modContent">Shandong Cuisine: Shandong Cuisine has been the representative of "Northern Cuisine" since the Song Dynasty.In the Ming and Qing dynasties, Shandong cuisine has become the main body of imperial cuisine, and has a great influence on the northeastern regions of Beijing and Tianjin. Today Shandong cuisine is evolved from the local cuisine of Jinan and Jiaodong.It is famous for its fragrance, freshness and pure taste. It pays great attention to the preparation of clear soup and milk soup. The clear soup is clear and fresh, while the milk soup is white and mellow</p>
+                    </div>
+                </div>
+
+
+                <div class="try2">
+                    <div class="c1">
+                        <img src="statics/images/cuan1.jpg" alt=""/>
+                    </div>
+                    <div class="cu2">
+                        <h1 class="modTitle">Sichuan Cuisine</h1>
+                        <p class="modContent">The flavor of Sichuan cuisine includes the characteristics of Chengdu, Leshan, Neijiang, Zigong, Nanchong and other local cuisines. The main characteristic lies in the variety of flavors, that is, the use of complex flavors.Chili, pepper, Chinese prickly ash, broad bean paste and so on are the main flavoring, the ratio of different, with a spicy, spicy, pepper, sesame catsup, mashed garlic, mustard, red oil, sweet and sour fish, aroma, taste and other type, all thick richness, with "a dish one case", "special flavor of the food subway", all kinds of dishes all popular.</p>
+                    </div>
+                </div>
+
+
+                <div class="try1">
+                    <div class="c0">
+                        <img src="statics/images/yue1.jpg" alt=""/>
+                    </div>
+                    <div class="cu1">
+                        <h1 class="modTitle">Guangdong Cuisine</h1>
+                        <p class="modContent">Cantonese cuisine is one of the eight major cuisines in China. It is developed from the special cuisines of Guangzhou, Chaozhou and Dongjiang. It started late, but it has a great influence.The formation and development of Cantonese cuisine is closely related to the geographical environment, economic conditions and customs of Guangdong.Located in the subtropical zone and on the edge of the South China Sea, Guangdong has abundant rainfall, evergreen vegetation and abundant natural resources, so its food has always been uniquely blessed.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="try2">
+                    <div class="c1">
+                        <img src="statics/images/su1.jpg" alt=""/>
+                    </div>
+                    <div class="cu2">
+                        <h1 class="modTitle">Jiangsu Cuisine</h1>
+                        <p class="modContent">Jiangsu Cuisine (Jiangsu Cuisine for short).It began in the Northern and Southern Dynasties, Tang and Song Dynasties. The economic development promoted the prosperity of the catering industry, and Su cuisine became one of the two pillars of "Southern Food".During the Ming and Qing Dynasties, Jiangsu cuisine developed more rapidly along the canal from north to south and the Yangtze River from east to west.The coastal geographical advantage has expanded the influence of Su dish at home and abroad.</p>
+                    </div>
+                </div>
+
+                <div class="try1">
+                    <div class="c0">
+                        <img src="statics/images/ming1.jpg" alt=""/>
+                    </div>
+                    <div class="cu1">
+                        <h1 class="modTitle">Fujian Cuisine</h1>
+                        <p class="modContent">Fujian Cuisine is one of the eight major cuisines in China. It was formed through the mixture of the Central Plains Han culture and the Minyue culture.Fujian Cuisine originated in Fuzhou. Based on Fuzhou Cuisine, Fujian Cuisine later integrates the five local specialties of Eastern Fujian, Southern Fujian, Western Fujian, Northern Fujian and Putian.In the narrow sense, Min Cuisine refers to Fuzhou Cuisine. It originated in Minxian County, Fuzhou, Fujian, and later developed into three schools of Fuzhou, Southern Fujian, and Western Fujian, namely Min Cuisine in the broad sense.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="try2">
+                    <div class="c1">
+                        <img src="statics/images/zhe1.jpg" alt=""/>
+                    </div>
+                    <div class="cu2">
+                        <h1 class="modTitle">Zhejiang Cuisine</h1>
+                        <p class="modContent">Zhejiang Cuisine (full name: Zhejiang Cuisine) is one of the eight traditional Chinese cuisines. Its landscapes are clear and beautiful, and its products are rich and delicious. As a proverb goes, "On earth there is heaven; on earth there are Suzhou and Hangzhou."Located on the coast of the East China Sea, Zhejiang Province is known as the land of fish and rice with a network of waterways in its north.The eastern coastal fishing ground is densely covered, rich in aquatic resources, economic fish and shell aquatic products more than 500 kinds, the total output value ranks the first in the country, rich in products, delicious food from the United States, unique characteristics, widely acclaimed.</p>
+                    </div>
+                </div>
+
+                <div class="try1">
+                    <div class="c0">
+                        <img src="statics/images/xiang1.jpg" alt=""/>
+                    </div>
+                    <div class="cu1">
+                        <h1 class="modTitle">Hunan Cuisine</h1>
+                        <p class="modContent">Hunan Cuisine, also known as Hunan Cuisine, has been formed as early as the Han Dynasty. It is one of the eight traditional Chinese cuisines with a long history, mainly featuring three local flavors: Xiangjiang River Basin, Dongting Lake Region and Xiangxi Mountain Region.Hunan Cuisine is delicately prepared with a wide range of materials, varied tastes and various varieties.Color oil heavy color thick, economical;Taste focus on spicy, fragrant fresh, soft and tender;Method to simmer, stew, wax, steamed, fried known as the law.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="try2">
+                    <div class="c1">
+                        <img src="statics/images/hui1.jpg" alt=""/>
+                    </div>
+                    <div class="cu2">
+                        <h1 class="modTitle">Anhui Cuisine</h1>
+                        <p class="modContent">Hui Cuisine, also known as "Hui Bang" or "Huizhou Style", is one of the eight major cuisines of China.Anhui cuisine originated in Huizhou Prefecture in the Southern Song Dynasty (now composed of Huangshan City, Wuyuan County in Jiangxi Province, and Jixi County in Xuancheng City, Anhui Province). Anhui cuisine is a local characteristic of ancient Huizhou. Its unique geographical and cultural environment endow Anhui cuisine with a unique flavor.Popular in Jiangsu, Zhejiang, Jiangxi, Fujian, Shanghai, Hubei and the middle and lower reaches of the Yangtze River, has a wide influence, the Ming and Qing Dynasties once ranked first in the eight major cuisines.</p>
+                    </div>
+                </div>
+
+
+            <h2>
+                ⊚ <a name="A2" class="modti">Attachment Interaction</a>
+            </h2>
+            <div class="tupian1" >
+<!--                <img src="statics/images/lu.jpg" />-->
+                <a href="./game_count_he/index.html">
+                <img src="statics/images/111.jpg"  alt=""/>
+                </a>
+
+            </div>
+
+            <h2>
+                ⊚ <a name="A3" class="modti">Video introduction</a>
+            </h2>
+            <div style="width: 500px; height: auto">
+                <object  class="video" controls="controls">
+                    <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=e0709hxhgwe" width="500" height="300" allowFullScreen="true"></iframe>
+                </object>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+</div>
+
+</div>
+</body>
+
+</html>
+<script type="text/javascript">
+    //导航固定
+    $(window).scroll(function () {
+        var height = $(document).scrollTop()
+        console.log(height)
+        if (height > 150) {
+            $('.header').addClass('fixed')
+        } else {
+            $('.header').removeClass('fixed')
+        }
+    })
+    //案例
+    $('.case ul li').hover(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    //轮播图，使用的是swiper插件
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        loop: true,
+        autoplay: 2500
+    });
+    var swiper = new Swiper('.swiper-container2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+</script>

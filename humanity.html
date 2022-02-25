@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+    <title>Humanity</title>
+    <link rel="stylesheet" type="text/css" href="statics/css/swiper.min.css"/>
+    <link rel="stylesheet" type="text/css" href="statics/css/stylelu.css"/>
+    <link rel="stylesheet" type="text/css" href="statics/css/Mapcss.css"/>
+    <script src="statics/js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="statics/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <style>
+        .logo{
+            margin: 20px;
+        }
+        .maptext{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<!--Header navigation-->
+<div class="header">
+    <div class="logo">
+        <img src="statics/images/logo.png" width="50px" height="50px">
+    </div>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="./Home/first.html">HOME</a>
+            </li>
+            <li>
+                <a href="./dialect.html">DIALECT</a>
+            </li>
+            <li>
+                <a href="./cuisine.html">CUISINE</a>
+            </li>
+            <li>
+                <a href="./population.html">POPULATION</a>
+            </li>
+            <li class="active">
+                <a href="">NATIONALITY</a>
+            </li>
+            <li >
+                <a href="./architecture.html">ARCHITECTURE</a>
+            </li>
+            <li>
+                <a href="./nature.html">NATURAL GEOGRAPHY</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--Rotogram-->
+<!--Rotogram-->
+<div class="slider swiper-container">
+    <ul class="swiper-wrapper">
+        <li class="swiper-slide">
+            <div class="picslider1" style="background-size: cover"></div>
+
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">Human Geography ~ Ethnicity</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">
+                    China has a long history and each ethnic group has developed its own national culture and living customs.</p>
+            </div>
+        </li>
+        <li class="swiper-slide">
+
+            <div class="picslider2" style="background-size: cover"></div>
+            <img src="statics/images/banner.jpg"/>
+            <div class="slider-txt">
+                <h3 class="title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">China Ethnicity</h3>
+                <p class="sub-title" style="text-shadow: 0 0 5px #afafaf, 0 0 5px #727272; ">The population of China's ethnic minorities is small but widely distributed.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="services">
+    <div class="services-box">
+        <div class="number">
+            <ul>
+                <li>
+                    <div class="picoverview2"></div>
+                </li>
+                <li>
+                    <p class="title">96<span>billions</span></p>
+                    <p class="desc">Square kilometres</p>
+                </li>
+                <li>
+                    <p class="title">56<sub>of</sub></p>
+                    <p class="desc">Ethnicities</p>
+                </li>
+
+                <li>
+                    <div class="picoverview3"></div>
+                </li>
+            </ul>
+        </div>
+
+
+        <script type="text/javascript" src="statics/js/maps/jquery.min.js"></script>
+        <script type="text/javascript" src="statics/js/maps/echarts.min.js"></script>
+        <script type="text/javascript" src="statics/js/maps/map/china.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery-resize/1.1/jquery.ba-resize.js"></script>
+        <button id="back">Return</button>
+        <div id="china-map"></div>
+        <script>
+            var myChart = echarts.init(document.getElementById('china-map'));
+            var oBack = document.getElementById("back");
+
+            var provinces = ['shanghai', 'hebei', 'shanxi', 'neimenggu', 'liaoning', 'jilin', 'heilongjiang', 'jiangsu', 'zhejiang', 'anhui', 'fujian', 'jiangxi', 'shandong', 'henan', 'hubei', 'hunan', 'guangdong', 'guangxi', 'hainan', 'sichuan', 'guizhou', 'yunnan', 'xizang', 'shanxi1', 'gansu', 'qinghai', 'ningxia', 'xinjiang', 'beijing', 'tianjin', 'chongqing', 'xianggang', 'aomen'];
+
+            var provincesText = ['shanghai', 'Hebei', 'Shanxi', 'Neimenggu', 'liaoning', 'Jilin', 'Heilongjiang', 'Jiangsu', 'Zhengjiang', 'anhui', 'fujian', 'Jiangxi', 'Shandong', 'Henan', 'Hubei', 'Hunan', 'Guangdong', 'Guangxi', 'Hainan', 'Sichuan', 'Guizhou', 'Yunnan', 'Xizang', 'Shanxi', 'Gansu', 'Qinghai', 'Ningxia', 'Xinjiang', 'beijing', 'tianjin', 'chongqing', 'Hongkong', 'Macau'];
+
+            var seriesData = [{
+                name: 'beijing',
+                value: 5,
+                value1: 3.6,
+            }, {
+                name: 'tianjin',
+                value: 3,
+                value1: 1.9
+            }, {
+                name: 'shanghai',
+                value: 2,
+                value1: 0.9
+            }, {
+                name: 'chongqing',
+                value: 7,
+                value1: 4.4
+            }, {
+                name: 'Hebei',
+                value: 5,
+                value1: 3.2
+            }, {
+                name: 'Henan',
+                value: 2,
+                value1: 1.1
+            }, {
+                name: 'Yunnan',
+                value: 30,
+                value1: 23
+            }, {
+                name: 'liaoning',
+                value: 16,
+                value1: 13
+            }, {
+                name: 'Heilongjiang',
+                value: 4,
+                value1: 2.2
+            }, {
+                name: 'Hubei',
+                value: 5,
+                value1: 3.5
+            }, {
+                name: 'anhui',
+                value: 1,
+                value1: 0.2
+            }, {
+                name: 'Shandong',
+                value: 1,
+                value1: 0.4
+            }, {
+                name: 'Xinjiang',
+                value: 60,
+                value1: 44
+            }, {
+                name: 'Jiangsu',
+                value: 1,
+                value1: 0.7
+            }, {
+                name: 'Zhengjiang',
+                value: 3,
+                value1: 2.2
+            }, {
+                name: 'Jiangxi',
+                value: 1,
+                value1: 0.6
+            }, {
+                name: 'Hunan',
+                value: 5,
+                value1: 3.8
+            }, {
+                name: 'Guangxi',
+                value: 38,
+                value1: 29
+            }, {
+                name: 'Gansu',
+                value: 1,
+                value1: 0.6
+            }, {
+                name: 'Shanxi',
+                value: 1,
+                value1: 0.4
+            }, {
+                name: 'Neimenggu',
+                value: 21,
+                value1: 12
+            }, {
+                name: 'Shanxi',
+                value: 1,
+                value1: 0.6
+            }, {
+                name: 'Jilin',
+                value: 9,
+                value1: 5
+            }, {
+                name: 'fujian',
+                value: 3,
+                value1: 2.4
+            }, {
+                name: 'Guizhou',
+                value: 36,
+                value1: 30
+            }, {
+                name: 'Guangdong',
+                value: 3,
+                value1: 1.7
+            }, {
+                name: 'Qinghai',
+                value: 47,
+                value1: 39
+            }, {
+                name: 'Xizang',
+                value: 92,
+                value1: 78
+            }, {
+                name: 'Sichuan',
+                value: 7,
+                value1: 5
+            }, {
+                name: 'Ningxia',
+                value: 36,
+                value1: 24
+            }, {
+                name: 'Hainan',
+                value: 17,
+                value1: 13
+            }, {
+                name: 'Taiwan',
+                value: 35,
+                value1: 24
+            }, {
+                name: 'Hongkong',
+                value: 1,
+                value1:0.7
+            }, {
+                name: 'Macau',
+                value: 1,
+                value1:0.8
+            }];
+
+
+            oBack.onclick = function () {
+                initEcharts("china", "中国");
+            };
+
+            initEcharts("china", "中国");
+
+            // Initializing echarts
+            function initEcharts(pName, Chinese_) {
+                var tmpSeriesData = pName === "china" ? seriesData : [];
+                var Type="Percentage of major ethnic minorities :"
+                var All1="Total percentage of ethnic minorities :"
+                var option = {
+                    title: {
+                        text: 'China',
+                        left: 'center'
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: function (params){
+                            if(params.name){
+                                var pri = "<p class='maptext'>Habitat of Nationality</p>"+'<br/>'+"<p style='color: #f5cdcd; font-weight: bolder'>"+params.name+"</p>"+'<br/>'+All1+params.data.value+'%'+'<br/>'+Type+params.data.value1+"%";
+                                return pri;
+                            }
+                        }
+                    },
+                    series: [
+                        {
+                            name: Chinese_ || pName,
+                            type: 'map',
+                            mapType: pName,
+                            roam: false,//Whether to enable mouse zoom and pan roaming
+                            data: tmpSeriesData,
+                            top: "3%",//Distance of the component from the container
+                            zoom:1.1,
+                            selectedMode : 'single',
+
+                            label: {
+                                normal: {
+                                    show: true,//Showing province labels
+                                    textStyle:{color:"#fbfdfe"}//Province label font colour
+                                },
+                                emphasis: {//Corresponding mouse hover effect
+                                    show: true,
+                                    textStyle:{color:"#323232"}
+                                }
+                            },
+                            itemStyle: {
+                                normal: {
+                                    borderWidth: .5,//Area border width
+                                    borderColor: '#c35e05',//Area border colour
+                                    areaColor:"#ff450070",//Area colour
+
+                                },
+
+                                emphasis: {
+                                    borderWidth: .5,
+                                    borderColor: '#4b0082',
+                                    areaColor:"#ece39e",
+                                }
+                            },
+                        }
+                    ],
+
+
+                };
+
+                myChart.setOption(option);
+                setTimeout(function (){
+                    window.onresize = function () {
+                        myChart.resize();
+                    }
+                },200)
+
+
+                myChart.off("click");
+
+                if (pName === "china") { // When national, add click into provincial
+                    myChart.on('click', function (param) {
+                        console.log(param.name);
+                        // Iterate over the subscripts in the provincesText to get the corresponding province js
+                        for (var i = 0; i < provincesText.length; i++) {
+                            if (param.name === provincesText[i]) {
+                                //Method of displaying the corresponding province
+                                showProvince(provinces[i], provincesText[i]);
+                                break;
+                            }
+                        }
+                        if (param.componentType === 'series') {
+                            var provinceName =param.name;
+                            $('#box').css('display','block');
+                            $("#box-title").html(provinceName);
+
+                        }
+                    });
+                } else { // Province, add double click Back to National
+                    myChart.on("dblclick", function () {
+                        initEcharts("china", "中国");
+                    });
+                }
+            }
+
+            // Show corresponding province
+            function showProvince(pName, Chinese_) {
+                //The js for this province is generated by an online build tool, which is saved locally and loaded when needed, so it's best not to bring it all in directly at the start.
+                loadBdScript('$' + pName + 'JS', './statics/js/maps/map/province/' + pName + '.js', function () {
+                    initEcharts(Chinese_);
+                });
+            }
+
+            // Load the corresponding JS
+            function loadBdScript(scriptId, url, callback) {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                if (script.readyState) {  //IE
+                    script.onreadystatechange = function () {
+                        if (script.readyState === "loaded" || script.readyState === "complete") {
+                            script.onreadystatechange = null;
+                            callback();
+                        }
+                    };
+                } else {  // Others
+                    script.onload = function () {
+                        callback();
+                    };
+                }
+                script.src = url;
+                script.id = scriptId;
+                document.getElementsByTagName("head")[0].appendChild(script);
+            };
+        </script>
+    </div>
+
+</div>
+
+<div class="block mainbox">
+    <h2 class="title">Ethnic Introduction</h2>
+    <p class="sub-title">Overview</p>
+    <div class="box1">
+        <div class="pic" style="background-size: cover"></div>
+        <div class="textt"><p>In the People's Republic of China, all 55 legal ethnic groups, except
+            for the main ethnic group Han, are ethnic minorities. After the founding
+            of New China, the Party and the government began to order the organisation
+            of efforts to identify ethnic names and groups in order to formulate and
+            implement the work of national unity and unification and also to enable
+            all ethnic groups to realise their equal rights.</p>
+
+            <p>As a result of these efforts, scientists have sorted out the basic composition
+                of our ethnic family and identified the 56 ethnic components. The successful
+                identification of ethnic groups has laid the foundation for the basis for
+                carrying out ethnic work.</p>
+
+        </div>
+        <br>
+        <div class="textt">
+
+            <p>
+                Under the leadership of the Communist Party of China, some ethnic
+                minorities whose social forms were still at the end of primitive
+                society or under the slave system or feudal serfdom before the
+                founding of New China have crossed the historical divide of hundreds
+                or even thousands of years in just a few decades and have entered
+                modern society. In May 1947, China established the Inner Mongolia
+                Autonomous Region, the first ethnic autonomous region at the provincial
+                level under the leadership of the Chinese Communist Party.
+            </p>
+
+        </div>
+        <div class="pic1">
+            <iframe frameborder="0" src="https://v.qq.com/txp/iframe/player.html?vid=c0032d3m83v" width="100%"
+                    height="100%" allowFullScreen="true"></iframe>
+        </div>
+        <br>
+        <div class="pic1" style="background-size: cover"></div>
+        <div class="textt">
+            <p>
+                Although the population of China's ethnic minorities is small, they are widely
+                distributed. All provinces, autonomous regions and municipalities directly under
+                the Central Government have ethnic minorities living in them, and the vast
+                majority of county-level units have more than two ethnic groups living in them.
+                China's ethnic minorities are mainly found in Inner Mongolia, Xinjiang, Ningxia,
+                Guangxi, Tibet, Yunnan, Guizhou, Qinghai, Sichuan, Gansu, Heilongjiang, Liaoning,
+                Jilin, Hunan, Hubei, Hainan, Taiwan, Chongqing and other provinces and autonomous
+                regions. The province with the largest ethnic composition in China is Yunnan,
+                with 25 ethnic groups.
+            </p>
+
+        </div>
+        <br>
+        <br>
+    </div>
+
+</div>
+<!--footer-->
+<div class="footer">
+
+</div>
+</body>
+
+</html>
+<script type="text/javascript">
+    //Navigation fixed
+    $(window).scroll(function () {
+        var height = $(document).scrollTop()
+        console.log(height)
+        if (height > 150) {
+            $('.header').addClass('fixed')
+        } else {
+            $('.header').removeClass('fixed')
+        }
+    })
+    //Cases
+    $('.case ul li').hover(function () {
+        $(this).addClass('active').siblings().removeClass('active')
+    })
+    //Rotating image, using the swiper plugin
+    var swiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        loop: true,
+        autoplay: 2500
+    });
+    var swiper = new Swiper('.swiper-container2', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        loop: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+    });
+</script>
+
